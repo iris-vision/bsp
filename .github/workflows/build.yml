@@ -35,12 +35,12 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        targets: [ linux ]
-        profiles: ${{fromJSON(needs.query.outputs.linux)}}
+        targets: [linux]
+        profiles: [rk2312]
     steps:
       - name: Build
         uses: radxa-repo/bsp@main
         with:
-          target: linux
-          edition: rk2312
+          target: ${{ matrix.targets }}
+          edition: ${{ matrix.profiles }}
           artifacts: true
