@@ -1,23 +1,6 @@
 name: Deploy
 on:
   workflow_dispatch:
-  merge_group:
-  push:
-    branches:
-      - main
-    paths:
-      - 'docs/**'
-      - 'theme/**'
-      - 'po/**'
-      - book.toml
-      - .github/workflows/docs.yaml
-  pull_request:
-    paths:
-      - 'docs/**'
-      - 'theme/**'
-      - 'po/**'
-      - book.toml
-      - .github/workflows/docs.yaml
 
 permissions:
   pages: write
