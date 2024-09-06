@@ -6,8 +6,8 @@ inputs:
   edition:
     required: true
   revision:
-    retuired: false
-    default: 1
+    required: false
+    default: 'v1'
   artifacts:
     required: false
     default: 'false'
@@ -21,7 +21,7 @@ runs:
     - name: Checkout
       uses: actions/checkout@v4
       with:
-        repository: radxa-repo/bsp
+        repository: iris-vision/bsp
         submodules: true
     - name: Install dependency
       shell: bash
