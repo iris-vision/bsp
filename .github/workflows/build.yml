@@ -39,7 +39,7 @@ jobs:
         profiles: [rk2312]
     steps:
       - name: Build
-        uses: radxa-repo/bsp@main
+        uses: iris-vision/bsp@main
         with:
           target: ${{ matrix.targets }}
           edition: ${{ matrix.profiles }}
