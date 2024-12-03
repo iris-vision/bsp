@@ -41,13 +41,7 @@ runs:
       with:
         name: ${{ inputs.target }}_${{ inputs.edition }}_${{ inputs.revision }}
         path: .output/
-    - name: ls director
-      shell: bash
-      run: |
-        pwd
-        ls -a 
-        echo ".output"
-        ls .output
+        include-hidden-files: true
     - name: Upload
       if: inputs.release-id != '' && inputs.github-token != ''
       uses: xresloader/upload-to-github-release@v1
