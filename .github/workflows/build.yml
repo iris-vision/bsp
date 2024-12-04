@@ -4,7 +4,7 @@ on:
 
 jobs:
   query:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     outputs:
       linux: ${{ steps.query.outputs.linux }}
       u-boot: ${{ steps.query.outputs.u-boot }}
@@ -32,7 +32,7 @@ jobs:
   #         artifacts: true
   build_linux:
     needs: query
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     strategy:
       matrix:
         targets: [linux]
