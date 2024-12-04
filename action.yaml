@@ -25,7 +25,7 @@ runs:
         submodules: true
     - name: Install dependency
       shell: bash
-      if: runner.name != 'iris-dev'
+      if: runner.name != 'AnthonyServer'
       run: |
         sudo apt-get update
         sudo apt-get install --no-install-recommends -y qemu-user-static binfmt-support
