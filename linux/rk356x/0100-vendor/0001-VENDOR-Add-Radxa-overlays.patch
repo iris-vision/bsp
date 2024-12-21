@@ -50,28 +50,20 @@ index 7cccbd7c6e..69399d2d41 100644
  dtb-$(CONFIG_ARCH_ROCKCHIP) += px30-evb.dtb
  dtb-$(CONFIG_ARCH_ROCKCHIP) += px30-engicam-px30-core-ctouch2.dtb
  dtb-$(CONFIG_ARCH_ROCKCHIP) += px30-engicam-px30-core-ctouch2-of10.dtb
-@@ -178,5 +178,3 @@ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588s-rock-5a.dtb
- dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588s-tablet-rk806-single-v10.dtb
- dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588s-tablet-v10.dtb
- dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588s-tablet-v11.dtb
--
--subdir-y := $(dts-dirs) overlay
 \ No newline at end of file
 diff --git a/scripts/Makefile.dtbinst b/scripts/Makefile.dtbinst
 index 7b68939815d0..46f4739a2458 100644
 --- a/scripts/Makefile.dtbinst
 +++ b/scripts/Makefile.dtbinst
-@@ -18,11 +18,11 @@ include scripts/Kbuild.include
+@@ -18,9 +18,11 @@ include scripts/Kbuild.include
  include $(src)/Makefile
  
  dtbs    := $(addprefix $(dst)/, $(dtb-y) $(if $(CONFIG_OF_ALL_DTBS),$(dtb-)))
--dtbos   := $(addprefix $(dst)/, $(dtbo-y))
--readmes := $(addprefix $(dst)/, $(dtbotxt-y))
 +scrs    := $(addprefix $(dst)/, $(scr-y))
 +dtbotxts:= $(addprefix $(dst)/, $(dtbotxt-y))
  subdirs := $(addprefix $(obj)/, $(subdir-y) $(subdir-m))
  
--__dtbs_install: $(dtbs) $(dtbos) $(readmes) $(subdirs)
+-__dtbs_install: $(dtbs) $(subdirs)
 +__dtbs_install: $(dtbs) $(scrs) $(dtbotxts) $(subdirs)
  	@:
  
