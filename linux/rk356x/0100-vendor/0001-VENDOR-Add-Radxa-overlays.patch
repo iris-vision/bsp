@@ -68,7 +68,7 @@ index 7b68939815d0..46f4739a2458 100644
  	@:
  
  quiet_cmd_dtb_install = INSTALL $@
-@@ -34,6 +34,11 @@ $(dst)/%.dtb: $(obj)/%.dtb
+@@ -30,6 +30,11 @@ $(dst)/%.dtb: $(obj)/%.dtb
  $(dst)/%.dtbo: $(obj)/%.dtbo
  	$(call cmd,dtb_install)
  
