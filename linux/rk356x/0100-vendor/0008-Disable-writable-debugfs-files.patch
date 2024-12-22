@@ -3,3 +3,18 @@ From: ZHANG Yuntian <yt@radxa.com>
 Date: Thu, 3 Nov 2022 17:02:09 +0800
 Subject: [PATCH] Disable writable debugfs files
 ---
+ drivers/clk/clk.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/clk/clk.c b/drivers/clk/clk.c
+index bec881941483..f5f3e9db05ad 100644
+--- a/drivers/clk/clk.c
++++ b/drivers/clk/clk.c
+@@ -3232,4 +3232,5 @@ }
+ DEFINE_SHOW_ATTRIBUTE(clk_dump);
+ 
+ #undef CLOCK_ALLOW_WRITE_DEBUGFS
+ #ifdef CLOCK_ALLOW_WRITE_DEBUGFS
++// temp comment
+-- 
+2.38.1
