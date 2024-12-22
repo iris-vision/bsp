@@ -68,10 +68,16 @@ index 7b68939815d0..46f4739a2458 100644
  	@:
  
  quiet_cmd_dtb_install = INSTALL $@
- @@ -30,5 +30,5 @@ $(dst)/%.dtb: $(obj)/%.dtb
+ @@ -30,5 +30,12 @@ $(dst)/%.dtb: $(obj)/%.dtb
  $(dst)/%.dtbo: $(obj)/%.dtbo
  	$(call cmd,dtb_install)
  
++$(dst)/%.scr: $(obj)/%.scr
++	$(call cmd,dtb_install)
++
++$(dst)/README.overlays: $(src)/README.overlays
++	$(call cmd,dtb_install)
++
  PHONY += $(subdirs)
 diff --git a/scripts/Makefile.lib b/scripts/Makefile.lib
 index d142577866..f48d411b65 100644
