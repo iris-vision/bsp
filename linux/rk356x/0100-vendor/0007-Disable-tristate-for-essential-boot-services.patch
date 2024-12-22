@@ -12,7 +12,7 @@ diff --git a/drivers/gpio/Kconfig b/drivers/gpio/Kconfig
 index 88edf9d46b37..0f2efbe28480 100644
 --- a/drivers/gpio/Kconfig
 +++ b/drivers/gpio/Kconfig
-@@ -496,7 +496,7 @@ config GPIO_REG
+@@ -536,7 +536,7 @@ 	  A 32-bit single register GPIO fixed in/out implementation.  This
  	  can be used to represent any register as a set of GPIO signals.
  
  config GPIO_ROCKCHIP
@@ -25,8 +25,8 @@ diff --git a/drivers/pinctrl/Kconfig b/drivers/pinctrl/Kconfig
 index f38f98fe55a7..1a1effc28787 100644
 --- a/drivers/pinctrl/Kconfig
 +++ b/drivers/pinctrl/Kconfig
-@@ -207,7 +207,7 @@ config PINCTRL_OXNAS
- 	select MFD_SYSCON
+@@ -443,7 +443,7 @@ 	help
+ 	  This selects the pinctrl driver for RK806
  
  config PINCTRL_ROCKCHIP
 -	tristate "Rockchip gpio and pinctrl driver"
