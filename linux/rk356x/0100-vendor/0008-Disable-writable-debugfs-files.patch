@@ -12,9 +12,6 @@ index bec881941483..f5f3e9db05ad 100644
 +++ b/drivers/clk/clk.c
 @@ -3232,7 +3232,7 @@ }
  DEFINE_SHOW_ATTRIBUTE(clk_dump);
- 
- #undef CLOCK_ALLOW_WRITE_DEBUGFS
- #ifdef CLOCK_ALLOW_WRITE_DEBUGFS
 -- 
 2.38.1
 
