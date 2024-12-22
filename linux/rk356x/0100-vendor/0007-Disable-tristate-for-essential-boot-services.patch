@@ -14,7 +14,7 @@ index 88edf9d46b37..0f2efbe28480 100644
 +++ b/drivers/gpio/Kconfig
 @@ -536,7 +536,7 @@ 	  A 32-bit single register GPIO fixed in/out implementation.  This
  	  can be used to represent any register as a set of GPIO signals.
- 
+
  config GPIO_ROCKCHIP
 -	tristate "Rockchip GPIO support"
 +	bool "Rockchip GPIO support"
