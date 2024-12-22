@@ -15,6 +15,7 @@ index 35533e1411..380f5613a0 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -1020,6 +1020,13 @@ KBUILD_CFLAGS   += $(call cc-option,-Werror=designated-init)
+ 
  # change __FILE__ to the relative path from the srctree
  KBUILD_CPPFLAGS += $(call cc-option,-fmacro-prefix-map=$(srctree)/=)
  
@@ -27,7 +28,7 @@ index 35533e1411..380f5613a0 100644
 +
  # include additional Makefiles when needed
  include-y			:= scripts/Makefile.extrawarn
- include-$(CONFIG_KASAN)		+= scripts/Makefile.kasan
+ include-$(CONFIG_DEBUG_INFO)	+= scripts/Makefile.debug
 -- 
 2.37.0
 
