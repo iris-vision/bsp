@@ -19,7 +19,7 @@ index 88edf9d46b37..0f2efbe28480 100644
 -	tristate "Rockchip GPIO support"
 +	bool "Rockchip GPIO support"
  	depends on ARCH_ROCKCHIP || COMPILE_TEST
-  select GENERIC_IRQ_CHIP
+ 	select GENERIC_IRQ_CHIP
  	select GPIOLIB_IRQCHIP
 diff --git a/drivers/pinctrl/Kconfig b/drivers/pinctrl/Kconfig
 index f38f98fe55a7..1a1effc28787 100644
