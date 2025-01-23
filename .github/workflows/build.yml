@@ -36,7 +36,7 @@ jobs:
     strategy:
       matrix:
         targets: [linux]
-        profiles: [rk2312]
+        profiles: [rk358x]
     steps:
       - name: Build
         uses: iris-vision/bsp@main
